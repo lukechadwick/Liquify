@@ -1,9 +1,9 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
+  "name": "Liquify",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
-  "homepage_url": "http://extensionizr.com",
+  "description": "Enhance the Shopify theme code editor",
+  "homepage_url": "//",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -28,7 +28,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://www.google.com/*"
+        "*.myshopify.com/admin/themes/"
       ],
       "css": [
         "src/inject/inject.css"
@@ -36,7 +36,7 @@
     },
     {
       "matches": [
-        "https://www.google.com/*"
+        "*.myshopify.com/admin/themes/"
       ],
       "js": [
         "src/inject/inject.js"
