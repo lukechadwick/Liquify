@@ -16,16 +16,18 @@
       fetch(window.location.href.split("?")[0] + "/assets.json")
         .then((response) => response.json())
         .then(function (data) {
-          // Filter out assets that aren't in the allowed list
-          let allowedExtensions = [".liquid", ".js", ".css", ".scss"];
-          let filteredResponse = data.assets.filter((word) =>
-            allowedExtensions.some((v) => word.key.includes(v))
-          );
-          getAssetsContent(filteredResponse).then((data) => {
-            let assetJSON = JSON.stringify(data);
+          if (data.assets) {
+            // Filter out assets that aren't in the allowed list
+            let allowedExtensions = [".liquid", ".js", ".css", ".scss"];
+            let filteredResponse = data.assets.filter((word) =>
+              allowedExtensions.some((v) => word.key.includes(v))
+            );
+            getAssetsContent(filteredResponse).then((data) => {
+              let assetJSON = JSON.stringify(data);
 
-            chrome.runtime.sendMessage({ data: assetJSON });
-          });
+              chrome.runtime.sendMessage({ data: assetJSON });
+            });
+          }
         });
     };
 
