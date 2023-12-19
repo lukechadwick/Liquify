@@ -82,3 +82,7 @@
 .cm-editor .cm-panels.cm-panels-bottom {
   font-size: 16px;
 }
+/* sidebar text items css */
+span[class^='Online-Store-UI-NavItem'] span[class^='Polaris-Text'] {
+  font-size: 14px !important;
+}
