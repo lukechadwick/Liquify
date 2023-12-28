@@ -53,6 +53,8 @@
   --p-border-divider: var(--p-border-width-1) solid var(--p-divider) !important;
   --p-surface-selected: #54575b !important;
   --osui_color-frame-surface-bg: rgb(37, 37, 38) !important;
+  --p-color-bg-surface: rgb(37, 37, 38) !important;
+  --p-color-border-secondary: dimgrey !important;
 }
 
 [role="list"] {
@@ -71,6 +73,10 @@
   background-color: #363636 !important;
 }
 
+.cm-search.cm-panel input {
+  filter: invert(1);
+}
+
 #liquify-search + div {
   background: var(--p-color-bg-app) !important;
 }
@@ -79,8 +85,13 @@
   padding-left: 0.5rem;
 }
 
-[p-color-scheme="dark"] [class^="Polaris-Button"] {
+[p-color-scheme="dark"] [class^="Polaris-Button_"] {
   background: rgb(37, 37, 38) !important;
+}
+
+.cm-tooltip {
+  filter: invert(1);
+  overflow: auto;
 }
 
 /* update */
