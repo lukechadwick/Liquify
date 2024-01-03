@@ -57,10 +57,16 @@
   --osui_color-frame-surface-bg: rgb(37, 37, 38) !important;
   --p-color-bg-surface: rgb(37, 37, 38) !important;
   --p-color-border-secondary: dimgrey !important;
+
+  --notification-icon : #ebe0e0;
 }
 
 [p-color-scheme="dark"] [class^="Polaris-Button_"] {
   background: rgb(37, 37, 38) !important;
+  padding: 0 5px;
+}
+[p-color-scheme="dark"] [class^="Polaris-Button_"][aria-disabled="true"] {
+  border: 1px solid #ccc;
 }
 
 .cm-tooltip {
@@ -72,6 +78,7 @@
   background: rgb(37, 37, 38) !important;
 }
 
+
 [data-diffy-attribute="tablist"] [data-diffy-attribute][aria-selected="true"] {
   background: var(--p-surface-pressed);
 }
@@ -82,7 +89,7 @@
 
 [role="list"] {
   background: rgb(37, 37, 38) !important;
-} 
+}
 
 #liquify-search + div {
   background: var(--p-color-bg-app) !important;
@@ -294,4 +301,13 @@ button[name="close"] {
 
 .ͼn {
   color: #f00 !important;
+}
+.Online-Store-UI-NavItem--hasIndicator_zoaah .Online-Store-UI-NavItem__PrimaryAction_12jax:before {
+    background-color: var(--notification-icon) !important;
+}
+[data-buttongroup-variant=segmented]>:last-child:hover,
+[data-buttongroup-variant=segmented]>:last-child [aria-expanded="true"]{
+  box-shadow: inset 0 -0.0625rem 0 #b5b5b5,inset -0.0625rem 0 0 #e3e3e3,inset 0.0625rem 0 0 #e3e3e3,inset 0 0.0625rem 0 #e3e3e3 !important;
+  border-bottom-right-radius: 0.5em !important;
+    border-top-right-radius: 0.5em !important;
 }

@@ -29,6 +29,8 @@
   --cm-equals: #d4d4d4;
   --cm-liquid-filter: #dcdcaa;
   --cm-number: #b5cea8;
+
+  --notification-icon : #ebe0e0;
 }
 
 [p-color-scheme="dark"], body.dark {
@@ -59,7 +61,7 @@
 
 [role="list"] {
   background: rgb(37, 37, 38) !important;
-} 
+}
 
 [placeholder="Enhanced search loading..."] + div::after {
   background: rgb(37, 37, 38) !important;
@@ -87,6 +89,10 @@
 
 [p-color-scheme="dark"] [class^="Polaris-Button_"] {
   background: rgb(37, 37, 38) !important;
+  padding: 0 5px;
+}
+[p-color-scheme="dark"] [class^="Polaris-Button_"][aria-disabled="true"] {
+  border: 1px solid #ccc;
 }
 
 .cm-tooltip {
@@ -282,4 +288,13 @@ button[name="close"] {
 
 .ͼn {
   color: #f00 !important;
+}
+.Online-Store-UI-NavItem--hasIndicator_zoaah .Online-Store-UI-NavItem__PrimaryAction_12jax:before {
+    background-color: var(--notification-icon) !important;
+}
+[data-buttongroup-variant=segmented]>:last-child:hover,
+[data-buttongroup-variant=segmented]>:last-child [aria-expanded="true"]{
+  box-shadow: inset 0 -0.0625rem 0 #b5b5b5,inset -0.0625rem 0 0 #e3e3e3,inset 0.0625rem 0 0 #e3e3e3,inset 0 0.0625rem 0 #e3e3e3 !important;
+  border-bottom-right-radius: 0.5em !important;
+    border-top-right-radius: 0.5em !important;
 }
