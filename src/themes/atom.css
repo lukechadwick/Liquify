@@ -59,11 +59,19 @@
   --p-color-border-secondary: dimgrey !important;
 
   --notification-icon : #ebe0e0;
+  --action-list-hover: #5c5858;
 }
-
+[p-color-scheme="dark"] [class^="Polaris-Button_"]{
+  padding: 0 5px;
+}
 [p-color-scheme="dark"] [class^="Polaris-Button_"] {
   background: rgb(37, 37, 38) !important;
-  padding: 0 5px;
+}
+[p-color-scheme="dark"] [class^="Polaris-Button--variantPrimary_"][aria-disabled="false"]{
+  background: none !important;
+}
+[p-color-scheme="dark"] [class^="Polaris-Button_"] span{
+  font-size: 12px !important;
 }
 [p-color-scheme="dark"] [class^="Polaris-Button_"][aria-disabled="true"] {
   border: 1px solid #ccc;
@@ -309,5 +317,8 @@ button[name="close"] {
 [data-buttongroup-variant=segmented]>:last-child [aria-expanded="true"]{
   box-shadow: inset 0 -0.0625rem 0 #b5b5b5,inset -0.0625rem 0 0 #e3e3e3,inset 0.0625rem 0 0 #e3e3e3,inset 0 0.0625rem 0 #e3e3e3 !important;
   border-bottom-right-radius: 0.5em !important;
-    border-top-right-radius: 0.5em !important;
+  border-top-right-radius: 0.5em !important;
+}
+[class^="Polaris-ActionList__Item_"]:hover {
+  background-color: var(--action-list-hover) !important;
 }
