@@ -75,6 +75,16 @@
 [data-diffy-attribute] [class*="selected"] button, [data-diffy-attribute] [aria-labelledby]:hover {
   background-color: #363636 !important;
 }
+[data-diffy-attribute="search"] input[placeholder="Search files..."],
+[data-diffy-attribute="search"] input[placeholder="Search files..."]:hover,
+[data-diffy-attribute="search"] input[placeholder="Search files..."]:focus,
+[data-diffy-attribute="search"] input[placeholder="Search files..."]:active{
+  background-color: #363636 !important;
+}
+[data-diffy-attribute="search"] [class^="Polaris-TextField_"] [class^="Polaris-TextField__Backdrop_"]:after,
+[data-diffy-attribute="search"] [class^="Polaris-TextField_"] [class^="Polaris-TextField__Backdrop_"]{
+  background-color: #363636 !important;
+}
 
 .cm-search.cm-panel input {
   filter: invert(1);
