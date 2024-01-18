@@ -85,3 +85,23 @@
 span[class^='Online-Store-UI-NavItem'] span[class^='Polaris-Text'] {
   font-size: 14px !important;
 }
+[class^='Online-Store-UI-PanelArea_']{
+  width: 15rem !important;
+}
+::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar{
+	width: 8px;
+  height: 8px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb{
+	border-radius: 12px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
