@@ -29,6 +29,9 @@
   --cm-equals: #d4d4d4;
   --cm-liquid-filter: #dcdcaa;
   --cm-number: #b5cea8;
+
+  --notification-icon : #ebe0e0;
+  --action-list-hover: #5c5858;
 }
 
 [p-color-scheme="dark"], body.dark {
@@ -59,7 +62,7 @@
 
 [role="list"] {
   background: rgb(37, 37, 38) !important;
-} 
+}
 
 [placeholder="Enhanced search loading..."] + div::after {
   background: rgb(37, 37, 38) !important;
@@ -70,6 +73,16 @@
 }
 
 [data-diffy-attribute] [class*="selected"] button, [data-diffy-attribute] [aria-labelledby]:hover {
+  background-color: #363636 !important;
+}
+[data-diffy-attribute="search"] input[placeholder="Search files..."],
+[data-diffy-attribute="search"] input[placeholder="Search files..."]:hover,
+[data-diffy-attribute="search"] input[placeholder="Search files..."]:focus,
+[data-diffy-attribute="search"] input[placeholder="Search files..."]:active{
+  background-color: #363636 !important;
+}
+[data-diffy-attribute="search"] [class^="Polaris-TextField_"] [class^="Polaris-TextField__Backdrop_"]:after,
+[data-diffy-attribute="search"] [class^="Polaris-TextField_"] [class^="Polaris-TextField__Backdrop_"]{
   background-color: #363636 !important;
 }
 
@@ -85,8 +98,21 @@
   padding-left: 0.5rem;
 }
 
+[p-color-scheme="dark"] [class^="Polaris-Button_"]{
+  padding: 0 5px;
+}
 [p-color-scheme="dark"] [class^="Polaris-Button_"] {
   background: rgb(37, 37, 38) !important;
+}
+[p-color-scheme="dark"] .Polaris-Button_r99lw.Polaris-Button--variantPrimary_1stsb,
+[p-color-scheme="dark"] .Polaris-Button_r99lw.Polaris-Button--variantPrimary_1stsb *{
+  background: none !important;
+}
+[p-color-scheme="dark"] [class^="Polaris-Button_"] span{
+  font-size: 12px !important;
+}
+[p-color-scheme="dark"] [class^="Polaris-Button_"][aria-disabled="true"] {
+  border: 1px solid #ccc;
 }
 
 .cm-tooltip {
@@ -282,4 +308,27 @@ button[name="close"] {
 
 .ͼn {
   color: #f00 !important;
+}
+.Online-Store-UI-NavItem--hasIndicator_zoaah .Online-Store-UI-NavItem__PrimaryAction_12jax:before {
+    background-color: var(--notification-icon) !important;
+}
+[data-buttongroup-variant=segmented]>:last-child:hover,
+[data-buttongroup-variant=segmented]>:last-child [aria-expanded="true"]{
+  box-shadow: inset 0 -0.0625rem 0 #b5b5b5,inset -0.0625rem 0 0 #e3e3e3,inset 0.0625rem 0 0 #e3e3e3,inset 0 0.0625rem 0 #e3e3e3 !important;
+  border-bottom-right-radius: 0.5em !important;
+    border-top-right-radius: 0.5em !important;
+}
+
+[class^="Online-Store-UI-ExitAction__Content_"]:hover{
+  color: #fff !important;
+}
+[class^="Online-Store-UI-ExitAction_"] svg path{
+  fill: #fff !important;
+}
+[class^="Online-Store-UI-PlainAction__"] svg,
+[class^="Online-Store-UI-PlainAction__"] svg:hover {
+  fill: #fff;
+}
+[class^="Polaris-ActionList__Item_"]:hover {
+  background-color: var(--action-list-hover) !important;
 }

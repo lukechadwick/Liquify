@@ -16,3 +16,9 @@
   right: 5px;
   fill: grey;
 }
+[p-color-scheme="dark"] [data-diffy-attribute="tablist"] [role="presentation"] button:nth-child(2):hover {
+  background-color: #a79797;
+}
+[p-color-scheme="dark"] [data-diffy-attribute="versionsLayoutGroup"] button:hover{
+  background-color: #1c1b1be0;
+}
