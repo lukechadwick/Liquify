@@ -104,6 +104,7 @@
 [p-color-scheme="dark"] [class^="Polaris-Button_"] {
   background: rgb(37, 37, 38) !important;
 }
+
 [p-color-scheme="dark"] .Polaris-Button_r99lw.Polaris-Button--variantPrimary_1stsb,
 [p-color-scheme="dark"] .Polaris-Button_r99lw.Polaris-Button--variantPrimary_1stsb *{
   background: none !important;
@@ -314,11 +315,14 @@ button[name="close"] {
 }
 [data-buttongroup-variant=segmented]>:last-child:hover,
 [data-buttongroup-variant=segmented]>:last-child [aria-expanded="true"]{
-  box-shadow: inset 0 -0.0625rem 0 #b5b5b5,inset -0.0625rem 0 0 #e3e3e3,inset 0.0625rem 0 0 #e3e3e3,inset 0 0.0625rem 0 #e3e3e3 !important;
+  /* box-shadow: inset 0 -0.0625rem 0 #b5b5b5,inset -0.0625rem 0 0 #e3e3e3,inset 0.0625rem 0 0 #e3e3e3,inset 0 0.0625rem 0 #e3e3e3 !important; */
   border-bottom-right-radius: 0.5em !important;
-    border-top-right-radius: 0.5em !important;
+  border-top-right-radius: 0.5em !important;
 }
-
+[data-buttongroup-variant=segmented]>:not(:last-child) [class^="Polaris-Button_"] {
+  --pc-button-box-shadow: 0;
+  border: 1px solid;
+}
 [class^="Online-Store-UI-ExitAction__Content_"]:hover{
   color: #fff !important;
 }
@@ -331,4 +335,21 @@ button[name="close"] {
 }
 [class^="Polaris-ActionList__Item_"]:hover {
   background-color: var(--action-list-hover) !important;
+}
+a[class^="Polaris-Button_"][target="_blank"]:first-child{
+  border: 1px solid #fff;
+  --pc-button-box-shadow: 0px;
+}
+[aria-label="Options"][type="button"],
+[aria-label="Options"][data-state="open"][type="button"]{
+  box-shadow: unset !important;
+  --pc-button-box-shadow: 0px;
+  border: 1px solid;
+}
+[class^="Polaris-Popover_"]:before {
+  box-shadow: 0px 0px 0px 1px #cccccc80 inset !important;
+}
+[class^="Polaris-Button_"] svg,
+[class^="Polaris-Button_"] svg:hover {
+  fill: #fff !important;
 }

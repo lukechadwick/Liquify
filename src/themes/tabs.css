@@ -22,3 +22,15 @@
 [p-color-scheme="dark"] [data-diffy-attribute="versionsLayoutGroup"] button:hover{
   background-color: #1c1b1be0;
 }
+[data-diffy-attribute="tablist"] [role="presentation"] button:nth-child(2) span:not([class^="Polaris-Icon"]) {
+  background-color: #fff !important;
+}
+button:has('.Polaris-Button--disabled_'){
+  --pc-button-box-shadow: 0px;
+}
+[data-diffy-attribute="versionsLayoutGroup"] span[class^="Polaris-Text--root_"]{
+  font-size: 14px !important
+}
+[data-diffy-attribute="versionsLayoutGroup"] {
+    display: flex;
+}
